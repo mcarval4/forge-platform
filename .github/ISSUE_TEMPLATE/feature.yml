@@ -1,0 +1,71 @@
+name: Platform Capability
+description: Propose a new capability or engineering improvement
+title: "[Capability]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the engineering problem before proposing the implementation.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What engineering problem needs to be solved?
+      placeholder: Describe the current limitation or requirement.
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Expected Outcome
+      description: What should be possible after this work is completed?
+    validations:
+      required: true
+
+  - type: textarea
+    id: approach
+    attributes:
+      label: Proposed Approach
+      description: Describe the initial technical approach. This may change during implementation.
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Define observable criteria for completion.
+      placeholder: |
+        - [ ] Capability can be reproduced
+        - [ ] Automated validation exists
+        - [ ] Documentation is updated
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Architecture
+        - Infrastructure
+        - CI/CD
+        - Kubernetes
+        - GitOps
+        - Security
+        - Observability
+        - Reliability
+        - Developer Experience
+        - Documentation
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Links, diagrams, logs, or other relevant information.  
