@@ -45,3 +45,6 @@ logs/
 tmp/
 temp/
 .cache/
+
+* AI tooling
+AGENTS.md
