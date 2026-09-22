@@ -60,7 +60,7 @@ Format:
 Examples:
 
 ```text
-feat/kind-bootstrap
+feat/k3s-bootstrap
 feat/argocd-installation
 fix/cluster-networking
 docs/gitops-architecture
@@ -93,7 +93,7 @@ Format:
 Examples:
 
 ```text
-feat: add kind cluster bootstrap
+feat: add k3s cluster bootstrap
 fix: correct ingress configuration
 docs: document local-first architecture
 ci: add infrastructure validation

@@ -102,7 +102,7 @@ Kubernetes
 ├──────────────────────────────────────────────┤
 │                Infrastructure                │
 │                                              │
-│        OpenTofu · Docker · kind              │
+│        OpenTofu · Docker · k3s               │
 └──────────────────────────────────────────────┘
 ```
 
@@ -116,7 +116,7 @@ Detailed architecture documentation and engineering decisions are maintained und
 |---|---|
 | Infrastructure as Code | OpenTofu |
 | Containers | Docker |
-| Kubernetes | kind, Kubernetes |
+| Kubernetes | k3s, Kubernetes |
 | Packaging | Helm |
 | Continuous Integration | GitHub Actions |
 | Container Registry | GitHub Container Registry |
@@ -152,7 +152,7 @@ Infrastructure responsibilities include:
 
 - OpenTofu
 - Docker
-- kind
+- k3s
 - Kubernetes
 
 ---

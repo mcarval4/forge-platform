@@ -123,7 +123,7 @@ Responsible for providing the runtime foundation.
 Initial implementation:
 
 - Docker
-- kind
+- k3s
 - OpenTofu
 - Kubernetes
 
@@ -347,7 +347,7 @@ Owns:
 Owns:
 
 - OpenTofu
-- kind
+- k3s
 - Cluster lifecycle
 - Infrastructure bootstrap
 

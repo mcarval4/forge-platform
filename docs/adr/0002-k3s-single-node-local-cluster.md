@@ -10,7 +10,7 @@ ADR-0001 establishes a local-first, cloud-agnostic foundation for Forge Platform
 
 The current host is an Apple Silicon Mac running an Ubuntu 24.04 Server ARM64 virtual machine through Lima. The server VM is intentionally constrained to 2 vCPU, 2 GiB of memory, and a 20 GiB disk. The initial cluster must remain within the project's 6 GiB RAM and 60 GiB provisioned-storage budget.
 
-ADR-0001 named Docker and kind as initial runtime technologies. That choice does not fit the current learning goal or the chosen VM-based environment as well as a lightweight Kubernetes distribution installed directly in the VM. This ADR refines the Kubernetes runtime decision without changing ADR-0001's local-first principle.
+The initial runtime documentation has been refined to select a lightweight Kubernetes distribution installed directly in the VM. This ADR records the runtime decision without changing ADR-0001's local-first principle.
 
 ## Decision
 
@@ -58,23 +58,7 @@ The cluster runs entirely on the local workstation at zero infrastructure cost a
 - Available capacity is limited by the local workstation and VM allocation
 - Bundled components differ from a manually assembled upstream Kubernetes installation
 
-### Option 2 — kind on Docker
-
-**Advantages**
-
-- Fast cluster creation and destruction
-- Useful for CI and disposable test clusters
-- Familiar Docker-based workflow
-
-**Disadvantages**
-
-- Adds an additional containerized layer instead of exercising a Kubernetes server installed in the Ubuntu VM
-- Is less aligned with the current objective of inspecting host services and recovery behavior
-- Does not match the selected k3s runtime baseline
-
-kind remains a possible future tool for targeted tests, but it is not the initial Forge cluster runtime.
-
-### Option 3 — Multi-Node k3s Cluster
+### Option 2 — Multi-Node k3s Cluster
 
 **Advantages**
 
@@ -88,7 +72,7 @@ kind remains a possible future tool for targeted tests, but it is not the initia
 
 This option is deferred until the single-node cluster is documented and operated successfully.
 
-### Option 4 — Managed Kubernetes in a Public Cloud
+### Option 3 — Managed Kubernetes in a Public Cloud
 
 **Advantages**
 
@@ -112,7 +96,7 @@ This option is deferred until the single-node cluster is documented and operated
 - The cluster has no high availability, and loss of the VM makes the cluster unavailable.
 - It is suitable only for local learning and portfolio demonstrations; it must not be represented as production-scale infrastructure.
 - Some k3s defaults and bundled components must be understood before adding overlapping tools.
-- Existing references to Docker and kind as the initial Kubernetes runtime are superseded by this ADR and should be updated when those documents are next revised.
+- Existing runtime documentation identifies k3s as the initial Kubernetes distribution.
 
 ## Implementation Boundaries
 

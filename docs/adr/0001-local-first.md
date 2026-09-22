@@ -29,7 +29,7 @@ Forge Platform will adopt a **local-first architecture** for its initial impleme
 The primary runtime will consist of:
 
 - Docker as the local container runtime
-- kind for Kubernetes clusters
+- k3s for Kubernetes clusters
 - Kubernetes as the workload orchestration layer
 - OpenTofu for infrastructure automation where appropriate
 
@@ -78,7 +78,7 @@ Manual environment configuration should be minimized.
 
 ### Option 1 — Local-First Kubernetes
 
-Run the initial platform locally using Docker and kind.
+Run the initial platform locally using Docker and k3s.
 
 **Advantages**
 
